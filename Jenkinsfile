@@ -1,7 +1,12 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'docker.io/library/busybox'
+    }
+
+  }
   stages {
-    stage('') {
+    stage('error') {
       steps {
         sh 'echo "Hello World!" > index.html'
       }
