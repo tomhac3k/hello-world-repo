@@ -1,14 +1,9 @@
 pipeline {
-  agent {
-    node {
-      label 'rocky-linux'
-    }
-
-  }
+  agent any
   stages {
     stage('') {
       steps {
-        sh 'echo "Hello World"'
+        sh 'echo "Hello World!" > index.html'
       }
     }
 
